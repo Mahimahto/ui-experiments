@@ -29,12 +29,24 @@ document.addEventListener("mousemove", (e) => {
                 draggingRect.top > categoryRect.bottom
             );
 
-            if (isOverlap) {
-                console.log("Overlap detected with categoryDiv:", categoryDiv);
-                categoryDiv.style.backgroundColor = "yellow";
-            } else {
-                categoryDiv.style.backgroundColor = "";
+            if (categoryDiv && dragingDiv) {
+                if (isOverlap) {
+                    console.log("Overlap detected with categoryDiv:", categoryDiv);
+                    categoryDiv.style.backgroundColor = "yellow";
+                    categoryDiv.appendChild(dragingDiv);
+                    categoryDiv.style.position = "relative"; 
+                    dragingDiv.style.position = "absolute"; 
+                    dragingDiv.style.top = "50%"; 
+                    dragingDiv.style.left = "50%";
+                    categoryDiv.appendChild(dragingDiv);
+                } else {
+                    categoryDiv.style.backgroundColor = "";
+                    if (categoryDiv.contains(dragingDiv) ){
+                        categoryDiv.removeChild(dragingDiv);
+                    }                    
+                }
             }
+            
         });
     }
 });
