@@ -1,6 +1,6 @@
 h1{
   text-align: center;
-  background-color: chartreuse;
+  background-color: #796877;
   padding: 20px;
 }
 #wordContainer{
@@ -8,7 +8,7 @@ h1{
   gap: 10px;
 }
 .dragingDiv {
-  background-color: blue;
+  background-color: #17c385;
   padding: 5px;
   border: 2px solid rgb(243, 5, 5);
   text-align: center;
@@ -24,7 +24,7 @@ h1{
 }
 
 .categoryHeading{
-  background-color: red;
+  background-color: #d46611;
   padding: 10px;
   margin: 0;
   font-weight: bold;
