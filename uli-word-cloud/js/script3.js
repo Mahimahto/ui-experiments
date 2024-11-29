@@ -20,7 +20,6 @@ for (let i = 0; i< wordsArray.length; i++) {
     word.append(wordsArray[i])
     let isDragging = false;
 let currentCategory = null; 
-
 dragingDiv.addEventListener("mousedown", (e) => {
     isDragging = true;
 });
@@ -64,8 +63,12 @@ document.addEventListener("mouseup", () => {
         const parentRect = currentCategory.offsetParent.getBoundingClientRect(); 
 
         const centerX = categoryRect.left - parentRect.left + categoryRect.width / 2;
-        const centerY = categoryRect.top - parentRect.top + categoryRect.height / 2;
-        currentCategory.style.backgroundColor = ""
+        const centerY = categoryRect.top - parentRect.top + categoryRect.height / 2
+        currentCategory.style.backgroundColor
+        console.log(currentCategory);
+        
+        dragingDiv.style.left = `${centerX - width / 2}px`;
+        dragingDiv.style.top = `${centerY - height / 2}px`;
         currentCategory.appendChild(dragingDiv);
     }
 
