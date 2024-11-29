@@ -22,12 +22,3 @@ h1{
   border: 1px solid black;
   margin-top: 10px;
 }
-
-.categoryHeading {
-  margin-top: 0;
-  font-size: 22px;
-  font-weight: bold;
-  color: black;
-  background-color: red;
-  padding: 10px;
-}
